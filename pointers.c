@@ -1,18 +1,13 @@
 #include <stdio.h>
 
-void swap(int *a, int *b) {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
-}
-
 int main() {
-  int x = 10;
-  int y = 20;
+  int num = 10;
+  int *ptr = &num; // ptr holds the address of num
 
-  printf("Before swapping: x = %d, y = %d\n", x, y);
-  swap(&x, &y);
-  printf("After swapping: x = %d, y = %d\n", x, y);
+  printf("The value of num is: %d\n", num);
+  printf("The address of num is: %p\n", &num);
+  printf("The value of ptr is: %p\n", ptr);
+  printf("The value stored at the address pointed to by ptr is: %d\n", *ptr);
 
   return 0;
 }
